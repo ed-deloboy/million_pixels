@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
-    <title> Подтверждение входа </title>
+    <title> Пиксели </title>
     <link rel="shortcut icon" href="favicon.png" type="image/png">
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
@@ -16,18 +16,76 @@
     <link href="plugins/sweetalerts/sweetalert.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/components/custom-sweetalert.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <!-- pixel style -->
+    <link rel="stylesheet" href="pixel.css">
 </head>
 
-<body>
+<body class="bodyy">
 
     <div class="form-container outer">
         <div class="form-container">
             <div class="form-content">
-                <h1 class="">Купить пиксель</h1>
+                <div class="container">
+                    <h1 class="">Купить пиксель</h1>
+                </div>
+                <div class="container-fluid">
+                    <div id="pixelsContainer" class="pixels_container"
+                        style="background-color: rgb(161, 161, 161);">
+                        <a class="pixel_item pixel_gray" href="#">
 
-                
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                        </a>
+                        <a class="pixel_item pixel_orange" href="#">
+
+                        </a>
+                        <a class="pixel_item pixel_green" href="#">
+
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                        </a>
+                        <a class="pixel_item pixel_red" href="#">
+
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                        </a>
+                        <a class="pixel_item pixel_orange" href="#">
+
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                        </a>
+                        <a class="pixel_item pixel_green" href="#">
+
+                        </a>
+                        <a class="pixel_item pixel_orange" href="#">
+
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                        </a>
+                        <a class="pixel_item pixel_red" href="#">
+
+                        </a>
 
 
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -39,7 +97,13 @@
 
     <!-- custom script -->
     <script>
-        console.log('heloo');
+        let windowWidth = window.screen.width * 1 / 19;
+        let pixelsContainer = document.getElementById('pixelsContainer');
+        console.log(windowWidth);
+
+        pixelsContainer.style.fontSize = windowWidth + 'px';
+
+        console.log(pixelsContainer);
     </script>
 
 </body>
