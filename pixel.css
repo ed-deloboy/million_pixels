@@ -2,13 +2,13 @@
 
 .pixels_container{
     margin: 0 auto;
-    font-size: 14px !important;
+    font-size: 18px !important;
 
 }
 
 .pixel_item{
     border-radius: 3px;
-    box-shadow: 0 0 1px 1px rgba(181, 181, 181, 0.127);
+    /* box-shadow: 0 0 1px 1px rgba(181, 181, 181, 0.127); */
     margin-bottom: 1px;
     transition: all 0.5s ease-in-out;
 }

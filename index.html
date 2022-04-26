@@ -1,708 +1,964 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1,
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,
             maximum-scale=1, shrink-to-fit=no">
-        <title> Пиксели </title>
-        <link rel="shortcut icon" href="favicon.png" type="image/png">
-        <!-- BEGIN GLOBAL MANDATORY STYLES -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700"
-            rel="stylesheet">
-        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"
-            type="text/css" />
-        <link href="plugins/animate/animate.css" rel="stylesheet"
-            type="text/css" />
-        <script src="plugins/sweetalerts/promise-polyfill.js"></script>
-        <link href="plugins/sweetalerts/sweetalert2.min.css" rel="stylesheet"
-            type="text/css" />
-        <link href="plugins/sweetalerts/sweetalert.css" rel="stylesheet"
-            type="text/css" />
-        <link href="assets/css/components/custom-sweetalert.css"
-            rel="stylesheet" type="text/css" />
-        <link rel="stylesheet"
-            href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
-        <!-- pixel style -->
-        <link rel="stylesheet" href="pixel.css">
-    </head>
-
-    <body class="bodyy">
-
-        <div class="form-container outer">
-            <div class="form-container">
-                <div class="form-content">
-                    <div class="container">
-                        <h1 class="">Купить пиксель</h1>
-                    </div>
-                    <div class="container-fluid">
-
-                        <div id="pixelsContainer" class="pixels_container">
-                            <a class="pixel_item pixel_gray" href="#">
-                                Первый
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_orange" href="#">
-                            </a>
-                            <a class="pixel_item pixel_orange" href="#">
-                            </a>
-                            <a class="pixel_item pixel_orange" href="#">
-                            </a>
-                            <a class="pixel_item pixel_orange" href="#">
-                            </a>
-                            <a class="pixel_item pixel_orange" href="#">
-                            </a>
-                            <a class="pixel_item pixel_orange" href="#">
-                            </a>
-                            <a class="pixel_item pixel_orange" href="#">
-                            </a>
-                            <a class="pixel_item pixel_orange" href="#">
-                            </a>
-                            <a class="pixel_item pixel_orange" href="#">
-                            </a>
-                            <a class="pixel_item pixel_orange" href="#">
-                            </a>
-                            <a class="pixel_item pixel_orange" href="#">
-                            </a>
-
-                            <a class="pixel_item pixel_orange" href="#">
-                            </a>
-                            <a class="pixel_item pixel_orange" href="#">
-                            </a>
-                            <a class="pixel_item pixel_orange" href="#">
-                            </a>
-                            <a class="pixel_item pixel_orange" href="#">
-                            </a>
-
-                            <a class="pixel_item pixel_green" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_green" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_green" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_green" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_green" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_green" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_green" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_green" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_green" href="#">
+    <title> Пиксели </title>
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+    <!-- <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" /> -->
+    <!-- <link href="plugins/animate/animate.css" rel="stylesheet" type="text/css" /> -->
+    <!-- <script src="plugins/sweetalerts/promise-polyfill.js"></script> -->
+    <!-- <link href="plugins/sweetalerts/sweetalert2.min.css" rel="stylesheet" type="text/css" /> -->
+    <!-- <link href="plugins/sweetalerts/sweetalert.css" rel="stylesheet" type="text/css" /> -->
+    <!-- <link href="assets/css/components/custom-sweetalert.css" rel="stylesheet" type="text/css" /> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <!-- pixel style -->
+    <link rel="stylesheet" href="pixel.css">
+</head>
+
+<body class="bodyy">
+
+    <div class="form-container outer">
+        <div class="form-container">
+            <div class="form-content">
+                <div class="container">
+                    <h1 class="">Купить пиксель</h1>
+                </div>
+                <div class="container-fluid">
+                    <form class="col-4 mx-auto mb-3">
+                        <select id="filterCatSelect" class="form-select form-select-lg mb-3"
+                            aria-label=".form-select-lg example">
+                            <option selected>Выберите категорию</option>
+                            <option value="999">Все</option>
+                            <option value="0">Первая</option>
+                            <option value="1">Вторая</option>
+                            <option value="2">Третья</option>
+                            <option value="3">Четвертая</option>
+                        </select>
+                    </form>
+                    <div id="pixelsContainer" class="pixels_container">
+                        <a class="pixel_item pixel_gray" href="#">
+                            Первый
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_orange" href="#">
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_orange" href="#">
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_orange" href="#">
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_orange" href="#">
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_orange" href="#">
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_orange" href="#">
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_orange" href="#">
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_orange" href="#">
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_orange" href="#">
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_orange" href="#">
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_orange" href="#">
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+
+                        <a class="pixel_item pixel_orange" href="#">
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_orange" href="#">
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_orange" href="#">
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_orange" href="#">
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+
+                        <a class="pixel_item pixel_green" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_green" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_green" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_green" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_green" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_green" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_green" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_green" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_green" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_green" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_green" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_orange" href="#">
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_orange" href="#">
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_orange" href="#">
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_orange" href="#">
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_orange" href="#">
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_orange" href="#">
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_green" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_green" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_green" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_green" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_green" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_green" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_green" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_red" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_red" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_red" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_red" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_red" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+
+                        <a class="pixel_item pixel_red" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_red" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_red" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_red" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_red" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_red" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+
+
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_orange" href="#">
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_green" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_orange" href="#">
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_red" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_red" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_red" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a> <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a> <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
+
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
 
-                            </a>
-                            <a class="pixel_item pixel_green" href="#">
+                            <img class="pixel__img" src="placeholder.png">
+                        </a> <a class="pixel_item pixel_gray" href="#">
 
-                            </a>
-                            <a class="pixel_item pixel_green" href="#">
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
 
-                            </a>
-                            <a class="pixel_item pixel_orange" href="#">
-                            </a>
-                            <a class="pixel_item pixel_orange" href="#">
-                            </a>
-                            <a class="pixel_item pixel_orange" href="#">
-                            </a>
-                            <a class="pixel_item pixel_orange" href="#">
-                            </a>
-                            <a class="pixel_item pixel_orange" href="#">
-                            </a>
-                            <a class="pixel_item pixel_orange" href="#">
-                            </a>
-                            <a class="pixel_item pixel_green" href="#">
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
 
-                            </a>
-                            <a class="pixel_item pixel_green" href="#">
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
 
-                            </a>
-                            <a class="pixel_item pixel_green" href="#">
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
 
-                            </a>
-                            <a class="pixel_item pixel_green" href="#">
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
 
-                            </a>
-                            <a class="pixel_item pixel_green" href="#">
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
 
-                            </a>
-                            <a class="pixel_item pixel_green" href="#">
+                            <img class="pixel__img" src="placeholder.png">
+                        </a> <a class="pixel_item pixel_gray" href="#">
 
-                            </a>
-                            <a class="pixel_item pixel_green" href="#">
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
 
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
 
-                            </a>
-                            <a class="pixel_item pixel_red" href="#">
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
 
-                            </a>
-                            <a class="pixel_item pixel_red" href="#">
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
 
-                            </a>
-                            <a class="pixel_item pixel_red" href="#">
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
 
-                            </a>
-                            <a class="pixel_item pixel_red" href="#">
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
 
-                            </a>
-                            <a class="pixel_item pixel_red" href="#">
+                            <img class="pixel__img" src="placeholder.png">
+                        </a> <a class="pixel_item pixel_gray" href="#">
 
-                            </a>
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
 
-                            <a class="pixel_item pixel_red" href="#">
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
 
-                            </a>
-                            <a class="pixel_item pixel_red" href="#">
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
 
-                            </a>
-                            <a class="pixel_item pixel_red" href="#">
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_red" href="#">
 
-                            </a>
-                            <a class="pixel_item pixel_red" href="#">
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
 
-                            </a>
-                            <a class="pixel_item pixel_red" href="#">
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
 
-                            </a>
-                            <a class="pixel_item pixel_red" href="#">
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
 
-                            </a>
+                            <img class="pixel__img" src="placeholder.png">
+                        </a> <a class="pixel_item pixel_gray" href="#">
 
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
+                        <a class="pixel_item pixel_gray" href="#">
 
-                            <a class="pixel_item pixel_gray" href="#">
+                            <img class="pixel__img" src="placeholder.png">
+                        </a>
 
-                            </a>
-                            <a class="pixel_item pixel_orange" href="#">
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
 
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
 
-                            </a>
-                            <a class="pixel_item pixel_green" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_orange" href="#">
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_red" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_red" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_red" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a> <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a> <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a> <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a> <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a> <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_red" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a> <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-                            <a class="pixel_item pixel_gray" href="#">
-
-                            </a>
-
-
-
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
-        <!-- <script src="assets/js/libs/jquery-3.1.1.min.js"></script> -->
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="crossorigin="anonymous"></script>
-        <script src="bootstrap/js/popper.min.js"></script>
-        <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!-- Modal -->
+    <div id="firstModal" class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Название компании</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="data_company_modal">Описание компании</p>
+                    <img class="img_company_modal" rc="#" alt="dsadv">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Understood</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
+    <!-- <script src="assets/js/libs/jquery-3.1.1.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- random lib -->
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <!-- randomazing -->
+    <script>
+
+        let randomBlockContainer = document.getElementById('pixelsContainer');
+        let blocks = document.querySelectorAll('.pixel_item');
+        let pixelImgs = document.querySelectorAll('.pixel__img');
+        // MODAL
+        let firstModal = document.getElementById('firstModal');
+        // filter select
+        let filterCatSelect = document.getElementById('filterCatSelect');
+        let outItemsArr = [];
+
+        pixelImgs.forEach(e => {
+            e.setAttribute('src', '#')
+        });
+        
 
 
+        ///присваиваем id
+        blocks.forEach((e, i) => {
+            // присваиваем id категории
+            let categId = Math.round(Math.random() * 3)
+            e.setAttribute('data-category', categId)
+            // просто id
+            e.setAttribute('data-id', i);
+            e.setAttribute('data-bs-toggle', 'modal');
+            e.setAttribute('data-bs-target', '#firstModal');
 
+        })
 
-        <!-- random lib -->
-        <script
-            src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-        <!-- randomazing -->
-        <script>
-
-       let blocks = document.querySelectorAll('.pixel_item')
-       let randomBlockContainer = document.getElementById('pixelsContainer');
-       let outItemsArr = [];
-      
         // random func
-       blocks.forEach((e,i) => {
-           e.setAttribute('data-id', i )
-       })
-      
-       const addRandomItems = () => {
-        blocks.forEach((e,i)=> {
-            outItemsArr.push(e)
-        })
-        outItemsArr.sort(() => {
-            return Math.random() - 0.5;
-        })
 
-        for(let i = 0; i < outItemsArr.length; i++){
-            randomBlockContainer.append(outItemsArr[i])
+        const addRandomItems = () => {
+            blocks.forEach((e, i) => {
+                outItemsArr.push(e)
+
+            })
+            outItemsArr.sort(() => {
+                return Math.random() - 0.5;
+            })
+
+            for (let i = 0; i < outItemsArr.length; i++) {
+                randomBlockContainer.append(outItemsArr[i])
+            }
         }
-       }
 
-       addRandomItems()
+        addRandomItems()
+
+        // функция фильтрации через сервер
+        filterCatSelect.addEventListener('change', e => {
+            let filterValue = e.target.value;
+
+            $.ajax({
+                url: "filter.php",
+                method: 'POST',
+                data: { filterValue: filterValue },
+                success: function (response) {
+                    blocks.forEach(e => {
+                        e.classList.add('d-none');
+                        if (e.dataset.category == response) {
+                            e.classList.remove('d-none');
+                        }
+                        else if (response == 999) {
+                            e.classList.remove('d-none');
+                        }
+                    });
+                }
+            });
+        })
 
 
-    //    random init
-       let masonry = document.querySelector('.pixels_container');
-       var msnry = new Masonry(masonry, {
+        //    masonry init
+        let masonry = document.querySelector('.pixels_container');
+        var msnry = new Masonry(masonry, {
             columnWidth: '.pixel_gray',
             itemSelector: '.pixel_item',
             gutter: 2,
             fitWidth: true,
             transitionDuration: 40,
-            stagger: 30
-       })
-
-
-//    получаем id по клику
-    blocks.forEach((e,i) => {
-        e.addEventListener('click', e => {
-           let id = e.target.dataset;
-
-           $.ajax({
-                url: "server.php",
-                method: 'POST',
-                data:id,
-                success: function(response){
-                    alert(response)
-                },
-                error: errResponse => {
-                    alert(errResponse)
-                }
-                
-            });
-        //    let attrArr = e;
-           
-            // alert(JSON.stringify(id))
+            stagger: 30,
+            percentPosition: true
         })
-    });
 
 
+        //    получаем id через сервер по клику
+        blocks.forEach((e, i) => {
+            e.addEventListener('click', e => {
+                let id = e.target.dataset;
+
+                $.ajax({
+                    url: "server.php",
+                    method: 'POST',
+                    data: id,
+                    success: function (response) {
+
+                    }
+                });
+            })
+        });
 
     </script>
-    </body>
+</body>
 
 </html>
