@@ -1,6 +1,11 @@
 
 
 .pixels_container{
+    transition: opacity .5s ease-in-out;
+}
+
+
+.pixels_container{
     margin: 0 auto;
     font-size: 18px !important;
 
@@ -11,7 +16,7 @@
     border: none;
     border-radius: 6px;
     /* box-shadow: 0 0 1px 1px rgba(181, 181, 181, 0.127); */
-    margin-bottom: 1px;
+    margin-bottom: 2px;
     transition: all 0.5s ease-in-out;
 }
 

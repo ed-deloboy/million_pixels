@@ -909,7 +909,7 @@
                 success: function (response) {
                     for(let i = 0; i < 200; i++){
                     if(response){
-                        // spinner.classList.add('d-none');
+                        spinner.classList.add('d-none');
                         randomBlockContainer.classList.remove('d-none');
                         pixelImgs.forEach((e,i) => {
                            e.setAttribute('src', response[i]['url'])
