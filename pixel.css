@@ -1,23 +1,22 @@
 
-
-.pixels_container{
-    transition: opacity .5s ease-in-out;
-}
-
-
+/* для регулировки размеров блоков, менять пиксели толькто в этом контейнере */
 .pixels_container{
     margin: 0 auto;
     font-size: 18px !important;
 
+}
+/* размер блоков на размере 7-8 дюймового планшета и меньше */
+@media(max-width: 768px){
+    .pixels_container{
+        font-size: 12px !important;
+    }
 }
 
 .pixel_item{
     cursor: pointer;
     border: none;
     border-radius: 6px;
-    /* box-shadow: 0 0 1px 1px rgba(181, 181, 181, 0.127); */
     margin-bottom: 2px;
-    transition: all 0.5s ease-in-out;
 }
 
 .pixel_item img{
@@ -28,30 +27,29 @@
     border-radius: 6px;
 
 }
-/* размеры блочков */
-.width_column{
-    width: 2em;
-    height: 2em;
-}
+
+/* маленький серый */
 .pixel_gray{
     background-color: rgb(214, 214, 214);
     width: 4em;
-    height: 2em;
+    height: 3em;
 }
-
+/* оранжевый вертикальный */
 .pixel_orange{
     background-color: rgb(213, 122, 11);
     width: 4em;
-    height: 4em;
+    height: 6em;
 }
+/* горизонтальный зеленый */
 .pixel_green{
     background-color: rgb(10, 224, 53);
     width: 8em;
-    height: 2em;
+    height: 3em;
 }
+/* большой красный */
 .pixel_red{
     background-color: rgb(244, 12, 12);
     width: 8em;
-    height: 4em;
+    height: 6em;
 }
 
