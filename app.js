@@ -12,9 +12,6 @@
         let fullArrFilterItems = {};
 
 
-
-
-
         // https://jsonplaceholder.typicode.com/photos - массив фото
 
         // получаю картинки и загружаю в src (для теста)
@@ -61,18 +58,15 @@
 
                 // вписываем размер во внутрь
 
-                let pix = document.createElement('p')
-                e.append(pix)
-                pix.style.fontSize = '14px'
-                pix.style.marginTop = '10%'
-                pix.classList.add('text-center', 'text-wrap')
-                pix.textContent = `${$(e).width()} x ${$(e).height()}`
+                // let pix = document.createElement('p')
+                // e.append(pix)
+                // pix.style.fontSize = '14px'
+                // pix.style.marginTop = '10%'
+                // pix.classList.add('text-center', 'text-wrap')
+                // pix.textContent = `${$(e).width()} x ${$(e).height()}`
 
             })
 
-            pixelImgs.forEach(e => {
-                e.style.position = 'absolute';
-            });
 
             // функция срабатывает при перезагрузке и рандомизирует позицию блока
             const addRandomItems = () => {

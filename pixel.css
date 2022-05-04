@@ -2,13 +2,13 @@
 /* для регулировки размеров блоков, менять пиксели толькто в этом контейнере */
 .pixels_container{
     margin: 0 auto;
-    font-size: 18px !important;
+    font-size: 20px !important;
 
 }
 /* размер блоков на размере 7-8 дюймового планшета и меньше */
 @media(max-width: 768px){
     .pixels_container{
-        font-size: 12px !important;
+        font-size: 16px !important;
     }
 }
 
@@ -30,25 +30,41 @@
 
 /* маленький серый */
 .pixel_gray{
-    background-color: rgb(214, 214, 214);
+    /* background-color: rgb(214, 214, 214); */
+    background-image: url(../img/720х540.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 4em;
     height: 3em;
 }
 /* оранжевый вертикальный */
 .pixel_orange{
-    background-color: rgb(213, 122, 11);
+    /* background-color: rgb(213, 122, 11); */
+    background-image: url(../img/720х1080.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 4em;
     height: 6em;
 }
 /* горизонтальный зеленый */
 .pixel_green{
-    background-color: rgb(10, 224, 53);
+    /* background-color: rgb(10, 224, 53); */
+    background-image: url(../img/1440х540.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 8em;
     height: 3em;
 }
 /* большой красный */
 .pixel_red{
-    background-color: rgb(244, 12, 12);
+    /* background-color: rgb(244, 12, 12); */
+    background-image: url(../img/1440х1080.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 8em;
     height: 6em;
 }
