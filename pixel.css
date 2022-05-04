@@ -13,16 +13,18 @@
 }
 
 .pixel_item{
+    overflow: hidden;
     cursor: pointer;
     border: none;
     border-radius: 6px;
-    margin-bottom: 2px;
+    margin-bottom: 1px;
 }
 
 .pixel_item img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     border: none;
     border-radius: 6px;
 
@@ -31,7 +33,7 @@
 /* маленький серый */
 .pixel_gray{
     /* background-color: rgb(214, 214, 214); */
-    background-image: url(../img/720х540.png);
+    background-image: url(../img/720х540.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -41,7 +43,7 @@
 /* оранжевый вертикальный */
 .pixel_orange{
     /* background-color: rgb(213, 122, 11); */
-    background-image: url(../img/720х1080.png);
+    background-image: url(../img/720х1080.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -51,7 +53,7 @@
 /* горизонтальный зеленый */
 .pixel_green{
     /* background-color: rgb(10, 224, 53); */
-    background-image: url(../img/1440х540.png);
+    background-image: url(../img/1440х540.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -61,11 +63,10 @@
 /* большой красный */
 .pixel_red{
     /* background-color: rgb(244, 12, 12); */
-    background-image: url(../img/1440х1080.png);
+    background-image: url(../img/1440х1080.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     width: 8em;
     height: 6em;
 }
-
